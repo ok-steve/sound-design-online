@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sccherry/sound-design-online.git"
+    "url": "git+https://github.com/ok-steve/sound-design-online.git"
   },
   "keywords": [
     "eleventy"
@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sccherry/sound-design-online/issues"
+    "url": "https://github.com/ok-steve/sound-design-online/issues"
   },
-  "homepage": "https://github.com/sccherry/sound-design-online#readme",
+  "homepage": "https://github.com/ok-steve/sound-design-online#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
