@@ -3,10 +3,11 @@ const pkg = require('./package.json');
 
 module.exports = function (eleventyConfig) {
   const pathPrefix =
-    process.env.ELEVENTY_ENV === 'production' ? `/${pkg.name}/` : '/';
+    process.env.ELEVENTY_RUN_MODE === 'build' ? `/${pkg.name}/` : '/';
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
   eleventyConfig.addPassthroughCopy('./public');
 
   eleventyConfig.addFilter('parsePrefix', (value, list) =>
@@ -35,7 +36,6 @@ module.exports = function (eleventyConfig) {
 
   return {
     pathPrefix,
-    dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     dir: {
