@@ -48,7 +48,7 @@
     </style>
   </head>
   <body>
-    <h1>{{ title }}</h1>
+    <h1>{{ title or site.name }}</h1>
 
     {{ content | safe }}
   </body>
