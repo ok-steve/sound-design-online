@@ -21,6 +21,10 @@
       defer
     ></script>
     <script src="/public/script.js" defer></script>
+
+    {% if useJsBundle %}
+      <script src="{% getBundleFileUrl "js" %}" type="module"></script>
+    {% endif %}
   </head>
   <body>
     <div class="container cover stack">

@@ -38,7 +38,7 @@ state:
 
 {{ piano('piano', mode='toggle') }}
 
-<script type="module">
+{% js %}
   import { optionsFromArguments, Midi, MonoSynth, start } from 'https://cdn.skypack.dev/tone';
   import { clamp, createAmplitudeEnvelope, createFilter, createFrequencyEnvelope, createOmniOscillator, createPiano, linearScale } from '../../public/lib/nexus-tone-components.js';
 
@@ -167,4 +167,4 @@ state:
     await start();
     console.log('audio context resumed');
   }, { once: true });
-</script>
+{% endjs %}

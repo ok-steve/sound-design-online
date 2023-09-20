@@ -22,7 +22,7 @@ state:
 
 {{ piano('piano') }}
 
-<script type="module">
+{% js %}
   import { Midi, PolySynth, Synth, start } from 'https://cdn.skypack.dev/tone';
   import { createAmplitudeEnvelope, createOmniOscillator, createPiano, linearScale } from '../../public/lib/nexus-tone-components.js';
 
@@ -73,4 +73,4 @@ state:
     await start();
     console.log('audio context resumed');
   }, { once: true });
-</script>
+{% endjs %}

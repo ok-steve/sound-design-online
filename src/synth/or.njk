@@ -33,7 +33,7 @@ state:
 
 {{ piano('piano', mode='toggle') }}
 
-<script type="module">
+{% js %}
   import { Freeverb, Gain, Midi, PolySynth, start } from 'https://cdn.skypack.dev/tone';
   import { createAmplitudeEnvelope, createFreeverb, createGain, createOmniOscillator, createPiano, MultiSynth } from '../../public/lib/nexus-tone-components.js';
 
@@ -93,4 +93,4 @@ state:
     await start();
     console.log('audio context resumed');
   }, { once: true });
-</script>
+{% endjs %}

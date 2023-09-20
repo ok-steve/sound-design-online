@@ -1,6 +1,7 @@
 {
   "layout": "default",
   "tags": "synth",
+  "useJsBundle": true,
   "eleventyComputed": {
     "eleventyNavigation": {
       "title": "{{ title }}"
