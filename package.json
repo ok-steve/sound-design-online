@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "eleventy --config eleventy.config.js",
+    "build": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build -- --serve --incremental --ignore-initial"
   },
@@ -14,9 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/ok-steve/sound-design-online.git"
   },
-  "keywords": [
-    "eleventy"
-  ],
+  "keywords": ["eleventy"],
   "author": {
     "name": "Steve Cherry",
     "email": "steve@stevecherry.net",
