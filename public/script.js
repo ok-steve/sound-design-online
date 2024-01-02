@@ -1,8 +1,3 @@
-// Disable normal form submission
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-});
-
 // Sync input and output values
 document.querySelectorAll('input[type="range"][id]').forEach((input) => {
   input.addEventListener("input", (e) => {
