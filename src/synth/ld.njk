@@ -40,7 +40,7 @@ state:
 
 {% js %}
   import { optionsFromArguments, Midi, MonoSynth, start } from 'https://cdn.skypack.dev/tone';
-  import { clamp, createAmplitudeEnvelope, createFilter, createFrequencyEnvelope, createOmniOscillator, createPiano, linearScale } from '../../public/lib/nexus-tone-components.js';
+  import { clamp, createAmplitudeEnvelope, createFilter, createFrequencyEnvelope, createOmniOscillator, createPiano, linearScale } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

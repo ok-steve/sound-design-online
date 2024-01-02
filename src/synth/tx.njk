@@ -74,7 +74,7 @@ state:
 
 {% js %}
   import { Compressor, Delay, Filter, Freeverb, Gain, Loop, LFO, Master, Midi, OmniOscillator, Transport, start } from 'https://cdn.skypack.dev/tone';
-  import { createCompressor, createDelay, createGain, createFilter, createFreeverb, createLfo, createLoop, createOmniOscillator, createTransport } from '../../public/lib/nexus-tone-components.js';
+  import { createCompressor, createDelay, createGain, createFilter, createFreeverb, createLfo, createLoop, createOmniOscillator, createTransport } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

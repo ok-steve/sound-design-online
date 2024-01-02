@@ -25,7 +25,7 @@ state:
 
 {% js %}
   import { Chorus, Midi, PolySynth, Synth, start } from 'https://cdn.skypack.dev/tone';
-  import { createChorus, createAmplitudeEnvelope, createOmniOscillator, createPiano } from '../../public/lib/nexus-tone-components.js';
+  import { createChorus, createAmplitudeEnvelope, createOmniOscillator, createPiano } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

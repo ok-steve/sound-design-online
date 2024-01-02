@@ -30,7 +30,7 @@ state:
 
 {% js %}
   import { MembraneSynth, Midi, start } from 'https://cdn.skypack.dev/tone';
-  import { createAmplitudeEnvelope, createOmniOscillator, createPiano } from '../../public/lib/nexus-tone-components.js';
+  import { createAmplitudeEnvelope, createOmniOscillator, createPiano } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

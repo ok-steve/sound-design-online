@@ -34,7 +34,7 @@ state:
 
 {% js %}
   import { AutoFilter, Freeverb, Noise, Time, Transport, start } from 'https://cdn.skypack.dev/tone';
-  import { createAutoFilter, createFreeverb, createNoise, createPiano, createTransport } from '../../public/lib/nexus-tone-components.js';
+  import { createAutoFilter, createFreeverb, createNoise, createPiano, createTransport } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

@@ -36,7 +36,7 @@ state:
 
 {% js %}
   import { AutoFilter, Midi, Transport, start } from 'https://cdn.skypack.dev/tone';
-  import { createAmplitudeEnvelope, createAutoFilter, createOmniOscillator, createPiano, createTransport, MultiSynth } from '../../public/lib/nexus-tone-components.js';
+  import { createAmplitudeEnvelope, createAutoFilter, createOmniOscillator, createPiano, createTransport, MultiSynth } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

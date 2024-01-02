@@ -35,7 +35,7 @@ state:
 
 {% js %}
   import { Freeverb, Gain, Midi, PolySynth, start } from 'https://cdn.skypack.dev/tone';
-  import { createAmplitudeEnvelope, createFreeverb, createGain, createOmniOscillator, createPiano, MultiSynth } from '../../public/lib/nexus-tone-components.js';
+  import { createAmplitudeEnvelope, createFreeverb, createGain, createOmniOscillator, createPiano, MultiSynth } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

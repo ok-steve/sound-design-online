@@ -45,7 +45,7 @@ state:
 
 {% js %}
   import { LFO, Loop, Midi, MonoSynth, PolySynth, Transport, start } from 'https://cdn.skypack.dev/tone';
-  import { createAmplitudeEnvelope, createFilter, createFrequencyEnvelope, createLfo, createLoop, createOmniOscillator, createPiano, createTransport } from '../../public/lib/nexus-tone-components.js';
+  import { createAmplitudeEnvelope, createFilter, createFrequencyEnvelope, createLfo, createLoop, createOmniOscillator, createPiano, createTransport } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 

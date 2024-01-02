@@ -35,7 +35,7 @@ state:
 
 {% js %}
   import { Midi, Pattern, Transport, start } from 'https://cdn.skypack.dev/tone';
-  import { createAmplitudeEnvelope, createOmniOscillator, createPattern, createPiano, createTransport, MultiSynth } from '../../public/lib/nexus-tone-components.js';
+  import { createAmplitudeEnvelope, createOmniOscillator, createPattern, createPiano, createTransport, MultiSynth } from '../public/lib/nexus-tone-components.js';
 
   const options = {{ state | dump | safe }};
 
