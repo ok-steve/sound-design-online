@@ -1,6 +1,0 @@
-{% from "macros/form.njk" import select %}
-
-{% macro piano(id, mode='button') %}
-  {{ select('Mode', id + '-mode', mode, ['button', 'toggle', 'impulse']) }}
-  <div id="{{ id }}-piano"></div>
-{% endmacro %}

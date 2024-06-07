@@ -5,16 +5,13 @@
   "description": "Creating Sounds for Electronic Music using web audio.",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build -- --serve --incremental --ignore-initial"
+    "start": "live-server . --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ok-steve/sound-design-online.git"
   },
-  "keywords": ["eleventy"],
   "author": {
     "name": "Steve Cherry",
     "email": "steve@stevecherry.net",
@@ -26,9 +23,6 @@
   },
   "homepage": "https://github.com/ok-steve/sound-design-online#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-navigation": "^0.3.2",
-    "@11ty/eleventy-plugin-bundle": "^1.0.4",
-    "rimraf": "^3.0.2"
+    "live-server": "^1.2.2"
   }
 }
