@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[UN] Unison | Sound Design Online</title>
     <meta
@@ -10,24 +10,24 @@
       content="Creating Sounds for Electronic Music using web audio."
     />
     <link
-      rel="canonical"
-      href="https://stevecherry.net/sound-design-online/un/"
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script src="../public/script.js" defer></script>
     <script src="./un.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
+    <div class="center cover stack">
       <header role="banner">
         <a href="../">Sound Design Online</a>
       </header>
-      <main class="[ stack ] [ flex-auto ]" role="main">
+      <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>[UN] Unison</h1>
         <div class="grid">
           <fieldset id="synth-oscillator">
             <legend>Oscillator</legend>
-            <label class="block" for="synth-oscillator-type">Type</label>
+            <label for="synth-oscillator-type">Type</label>
             <select
               id="synth-oscillator-type"
               name="synth-oscillator-type"
@@ -40,9 +40,7 @@
             </select>
             <fieldset id="synth-oscillator-detune">
               <legend>Detune</legend>
-              <label class="block" for="synth-oscillator-detune-octave"
-                >Octave</label
-              >
+              <label for="synth-oscillator-detune-octave">Octave</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-octave"
@@ -53,9 +51,7 @@
                 value="0"
               />
               <output for="synth-oscillator-detune-octave">0</output>
-              <label class="block" for="synth-oscillator-detune-coarse"
-                >Coarse</label
-              >
+              <label for="synth-oscillator-detune-coarse">Coarse</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-coarse"
@@ -66,9 +62,7 @@
                 value="0"
               />
               <output for="synth-oscillator-detune-coarse">0</output>
-              <label class="block" for="synth-oscillator-detune-fine"
-                >Fine</label
-              >
+              <label for="synth-oscillator-detune-fine">Fine</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-fine"
@@ -80,7 +74,7 @@
               />
               <output for="synth-oscillator-detune-fine">0</output>
             </fieldset>
-            <label class="block" for="synth-oscillator-phase">Phase</label>
+            <label for="synth-oscillator-phase">Phase</label>
             <input
               type="range"
               id="synth-oscillator-phase"
@@ -96,9 +90,7 @@
             <legend>Envelope</legend>
             <fieldset id="synth-envelope-envelope">
               <legend>Envelope</legend>
-              <label class="block" for="synth-envelope-envelope-attack"
-                >Attack</label
-              >
+              <label for="synth-envelope-envelope-attack">Attack</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-attack"
@@ -109,9 +101,7 @@
                 value="0.01"
               />
               <output for="synth-envelope-envelope-attack">0.01</output>
-              <label class="block" for="synth-envelope-envelope-decay"
-                >Decay</label
-              >
+              <label for="synth-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-decay"
@@ -122,9 +112,7 @@
                 value="0.1"
               />
               <output for="synth-envelope-envelope-decay">0.1</output>
-              <label class="block" for="synth-envelope-envelope-sustain"
-                >Sustain</label
-              >
+              <label for="synth-envelope-envelope-sustain">Sustain</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-sustain"
@@ -135,9 +123,7 @@
                 value="0.5"
               />
               <output for="synth-envelope-envelope-sustain">0.5</output>
-              <label class="block" for="synth-envelope-envelope-release"
-                >Release</label
-              >
+              <label for="synth-envelope-envelope-release">Release</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-release"
@@ -152,7 +138,7 @@
           </fieldset>
           <fieldset id="chorus">
             <legend>Chorus</legend>
-            <label class="block" for="chorus-frequency">Frequency</label>
+            <label for="chorus-frequency">Frequency</label>
             <input
               type="range"
               id="chorus-frequency"
@@ -163,7 +149,7 @@
               value="2"
             />
             <output for="chorus-frequency">2</output>
-            <label class="block" for="chorus-delay-time">Delay time</label>
+            <label for="chorus-delay-time">Delay time</label>
             <input
               type="range"
               id="chorus-delay-time"
@@ -174,7 +160,7 @@
               value="0"
             />
             <output for="chorus-delay-time">0</output>
-            <label class="block" for="chorus-depth">Depth</label>
+            <label for="chorus-depth">Depth</label>
             <input
               type="range"
               id="chorus-depth"
@@ -187,7 +173,7 @@
             <output for="chorus-depth">0.7</output>
           </fieldset>
         </div>
-        <label class="block" for="piano-mode">Mode</label>
+        <label for="piano-mode">Mode</label>
         <select id="piano-mode" name="piano-mode" value="button">
           <option value="button" selected>button</option>
           <option value="toggle">toggle</option>

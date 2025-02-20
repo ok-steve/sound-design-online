@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[SQ] Sequence | Sound Design Online</title>
     <meta
@@ -10,24 +10,24 @@
       content="Creating Sounds for Electronic Music using web audio."
     />
     <link
-      rel="canonical"
-      href="https://stevecherry.net/sound-design-online/sq/"
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script src="../public/script.js" defer></script>
     <script src="./sq.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
+    <div class="center cover stack">
       <header role="banner">
         <a href="../">Sound Design Online</a>
       </header>
-      <main class="[ stack ] [ flex-auto ]" role="main">
+      <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>[SQ] Sequence</h1>
         <div class="grid">
           <fieldset id="synth-oscillator">
             <legend>Oscillator</legend>
-            <label class="block" for="synth-oscillator-type">Type</label>
+            <label for="synth-oscillator-type">Type</label>
             <select
               id="synth-oscillator-type"
               name="synth-oscillator-type"
@@ -40,9 +40,7 @@
             </select>
             <fieldset id="synth-oscillator-detune">
               <legend>Detune</legend>
-              <label class="block" for="synth-oscillator-detune-octave"
-                >Octave</label
-              >
+              <label for="synth-oscillator-detune-octave">Octave</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-octave"
@@ -53,9 +51,7 @@
                 value="0"
               />
               <output for="synth-oscillator-detune-octave">0</output>
-              <label class="block" for="synth-oscillator-detune-coarse"
-                >Coarse</label
-              >
+              <label for="synth-oscillator-detune-coarse">Coarse</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-coarse"
@@ -66,9 +62,7 @@
                 value="0"
               />
               <output for="synth-oscillator-detune-coarse">0</output>
-              <label class="block" for="synth-oscillator-detune-fine"
-                >Fine</label
-              >
+              <label for="synth-oscillator-detune-fine">Fine</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-fine"
@@ -80,7 +74,7 @@
               />
               <output for="synth-oscillator-detune-fine">0</output>
             </fieldset>
-            <label class="block" for="synth-oscillator-phase">Phase</label>
+            <label for="synth-oscillator-phase">Phase</label>
             <input
               type="range"
               id="synth-oscillator-phase"
@@ -96,9 +90,7 @@
             <legend>Envelope</legend>
             <fieldset id="synth-envelope-envelope">
               <legend>Envelope</legend>
-              <label class="block" for="synth-envelope-envelope-attack"
-                >Attack</label
-              >
+              <label for="synth-envelope-envelope-attack">Attack</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-attack"
@@ -109,9 +101,7 @@
                 value="0.01"
               />
               <output for="synth-envelope-envelope-attack">0.01</output>
-              <label class="block" for="synth-envelope-envelope-decay"
-                >Decay</label
-              >
+              <label for="synth-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-decay"
@@ -122,9 +112,7 @@
                 value="0.8"
               />
               <output for="synth-envelope-envelope-decay">0.8</output>
-              <label class="block" for="synth-envelope-envelope-sustain"
-                >Sustain</label
-              >
+              <label for="synth-envelope-envelope-sustain">Sustain</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-sustain"
@@ -135,9 +123,7 @@
                 value="0"
               />
               <output for="synth-envelope-envelope-sustain">0</output>
-              <label class="block" for="synth-envelope-envelope-release"
-                >Release</label
-              >
+              <label for="synth-envelope-envelope-release">Release</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-release"
@@ -152,7 +138,7 @@
           </fieldset>
           <fieldset id="synth-filter">
             <legend>Filter</legend>
-            <label class="block" for="synth-filter-type">Type</label>
+            <label for="synth-filter-type">Type</label>
             <select
               id="synth-filter-type"
               name="synth-filter-type"
@@ -167,7 +153,7 @@
               <option value="allpass">allpass</option>
               <option value="peaking">peaking</option>
             </select>
-            <label class="block" for="synth-filter-rolloff">Rolloff</label>
+            <label for="synth-filter-rolloff">Rolloff</label>
             <select
               id="synth-filter-rolloff"
               name="synth-filter-rolloff"
@@ -178,7 +164,7 @@
               <option value="-48">-48</option>
               <option value="-96">-96</option>
             </select>
-            <label class="block" for="synth-filter-frequency">Frequency</label>
+            <label for="synth-filter-frequency">Frequency</label>
             <input
               type="range"
               id="synth-filter-frequency"
@@ -189,7 +175,7 @@
               value="350"
             />
             <output for="synth-filter-frequency">350</output>
-            <label class="block" for="synth-filter-q">Q</label>
+            <label for="synth-filter-q">Q</label>
             <input
               type="range"
               id="synth-filter-q"
@@ -205,9 +191,7 @@
             <legend>Filter envelope</legend>
             <fieldset id="synth-filter-envelope-envelope">
               <legend>Envelope</legend>
-              <label class="block" for="synth-filter-envelope-envelope-attack"
-                >Attack</label
-              >
+              <label for="synth-filter-envelope-envelope-attack">Attack</label>
               <input
                 type="range"
                 id="synth-filter-envelope-envelope-attack"
@@ -218,9 +202,7 @@
                 value="0.01"
               />
               <output for="synth-filter-envelope-envelope-attack">0.01</output>
-              <label class="block" for="synth-filter-envelope-envelope-decay"
-                >Decay</label
-              >
+              <label for="synth-filter-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
                 id="synth-filter-envelope-envelope-decay"
@@ -231,7 +213,7 @@
                 value="0.8"
               />
               <output for="synth-filter-envelope-envelope-decay">0.8</output>
-              <label class="block" for="synth-filter-envelope-envelope-sustain"
+              <label for="synth-filter-envelope-envelope-sustain"
                 >Sustain</label
               >
               <input
@@ -244,7 +226,7 @@
                 value="0"
               />
               <output for="synth-filter-envelope-envelope-sustain">0</output>
-              <label class="block" for="synth-filter-envelope-envelope-release"
+              <label for="synth-filter-envelope-envelope-release"
                 >Release</label
               >
               <input
@@ -258,7 +240,7 @@
               />
               <output for="synth-filter-envelope-envelope-release">0.02</output>
             </fieldset>
-            <label class="block" for="synth-filter-envelope-base-frequency"
+            <label for="synth-filter-envelope-base-frequency"
               >Base frequency</label
             >
             <input
@@ -271,9 +253,7 @@
               value="200"
             />
             <output for="synth-filter-envelope-base-frequency">200</output>
-            <label class="block" for="synth-filter-envelope-octaves"
-              >Octaves</label
-            >
+            <label for="synth-filter-envelope-octaves">Octaves</label>
             <input
               type="range"
               id="synth-filter-envelope-octaves"
@@ -284,9 +264,7 @@
               value="0"
             />
             <output for="synth-filter-envelope-octaves">0</output>
-            <label class="block" for="synth-filter-envelope-exponent"
-              >Exponent</label
-            >
+            <label for="synth-filter-envelope-exponent">Exponent</label>
             <input
               type="range"
               id="synth-filter-envelope-exponent"
@@ -300,20 +278,20 @@
           </fieldset>
           <fieldset id="lfo">
             <legend>LFO</legend>
-            <label class="block" for="lfo-frequency">Frequency</label>
+            <label for="lfo-frequency">Frequency</label>
             <select id="lfo-frequency" name="lfo-frequency" value="1n">
               <option value="4n">4n</option>
               <option value="8n">8n</option>
               <option value="16n">16n</option>
             </select>
-            <label class="block" for="lfo-type">Type</label>
+            <label for="lfo-type">Type</label>
             <select id="lfo-type" name="lfo-type" value="sawtooth">
               <option value="sine">sine</option>
               <option value="triangle">triangle</option>
               <option value="square">square</option>
               <option value="sawtooth" selected>sawtooth</option>
             </select>
-            <label class="block" for="lfo-min">Min</label>
+            <label for="lfo-min">Min</label>
             <input
               type="range"
               id="lfo-min"
@@ -324,7 +302,7 @@
               value="100"
             />
             <output for="lfo-min">100</output>
-            <label class="block" for="lfo-max">Max</label>
+            <label for="lfo-max">Max</label>
             <input
               type="range"
               id="lfo-max"
@@ -338,7 +316,7 @@
           </fieldset>
           <fieldset id="loop">
             <legend>Loop</legend>
-            <label class="block" for="loop-interval">Interval</label>
+            <label for="loop-interval">Interval</label>
             <select id="loop-interval" name="loop-interval" value="8n">
               <option value="4n">4n</option>
               <option value="8n" selected>8n</option>
@@ -347,7 +325,7 @@
           </fieldset>
           <fieldset id="transport">
             <legend>Transport</legend>
-            <label class="block" for="transport-bpm">BPM</label>
+            <label for="transport-bpm">BPM</label>
             <input
               type="range"
               id="transport-bpm"
@@ -367,7 +345,7 @@
             <label for="transport-state"> State </label>
           </fieldset>
         </div>
-        <label class="block" for="piano-mode">Mode</label>
+        <label for="piano-mode">Mode</label>
         <select id="piano-mode" name="piano-mode" value="toggle">
           <option value="button">button</option>
           <option value="toggle" selected>toggle</option>

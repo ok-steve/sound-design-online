@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[CH] Chord | Sound Design Online</title>
     <meta
@@ -10,24 +10,24 @@
       content="Creating Sounds for Electronic Music using web audio."
     />
     <link
-      rel="canonical"
-      href="https://stevecherry.net/sound-design-online/ch/"
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script src="../public/script.js" defer></script>
     <script src="ch.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
+    <div class="center cover stack">
       <header role="banner">
         <a href="../">Sound Design Online</a>
       </header>
-      <main class="[ stack ] [ flex-auto ]" role="main">
+      <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>[CH] Chord</h1>
         <div class="grid">
           <fieldset id="synth-oscillator">
             <legend>Oscillator</legend>
-            <label class="block" for="synth-oscillator-type">Type</label>
+            <label for="synth-oscillator-type">Type</label>
             <select
               id="synth-oscillator-type"
               name="synth-oscillator-type"
@@ -40,9 +40,7 @@
             </select>
             <fieldset id="synth-oscillator-detune">
               <legend>Detune</legend>
-              <label class="block" for="synth-oscillator-detune-octave"
-                >Octave</label
-              >
+              <label for="synth-oscillator-detune-octave">Octave</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-octave"
@@ -53,9 +51,7 @@
                 value="0"
               />
               <output for="synth-oscillator-detune-octave">0</output>
-              <label class="block" for="synth-oscillator-detune-coarse"
-                >Coarse</label
-              >
+              <label for="synth-oscillator-detune-coarse">Coarse</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-coarse"
@@ -66,9 +62,7 @@
                 value="0"
               />
               <output for="synth-oscillator-detune-coarse">0</output>
-              <label class="block" for="synth-oscillator-detune-fine"
-                >Fine</label
-              >
+              <label for="synth-oscillator-detune-fine">Fine</label>
               <input
                 type="range"
                 id="synth-oscillator-detune-fine"
@@ -80,7 +74,7 @@
               />
               <output for="synth-oscillator-detune-fine">0</output>
             </fieldset>
-            <label class="block" for="synth-oscillator-phase">Phase</label>
+            <label for="synth-oscillator-phase">Phase</label>
             <input
               type="range"
               id="synth-oscillator-phase"
@@ -94,7 +88,7 @@
           </fieldset>
           <fieldset id="synth-suboscillators-0">
             <legend>Suboscillator 1</legend>
-            <label class="block" for="synth-suboscillators-0-type">Type</label>
+            <label for="synth-suboscillators-0-type">Type</label>
             <select
               id="synth-suboscillators-0-type"
               name="synth-suboscillators-0-type"
@@ -107,9 +101,7 @@
             </select>
             <fieldset id="synth-suboscillators-0-detune">
               <legend>Detune</legend>
-              <label class="block" for="synth-suboscillators-0-detune-octave"
-                >Octave</label
-              >
+              <label for="synth-suboscillators-0-detune-octave">Octave</label>
               <input
                 type="range"
                 id="synth-suboscillators-0-detune-octave"
@@ -120,9 +112,7 @@
                 value="0"
               />
               <output for="synth-suboscillators-0-detune-octave">0</output>
-              <label class="block" for="synth-suboscillators-0-detune-coarse"
-                >Coarse</label
-              >
+              <label for="synth-suboscillators-0-detune-coarse">Coarse</label>
               <input
                 type="range"
                 id="synth-suboscillators-0-detune-coarse"
@@ -133,9 +123,7 @@
                 value="400"
               />
               <output for="synth-suboscillators-0-detune-coarse">400</output>
-              <label class="block" for="synth-suboscillators-0-detune-fine"
-                >Fine</label
-              >
+              <label for="synth-suboscillators-0-detune-fine">Fine</label>
               <input
                 type="range"
                 id="synth-suboscillators-0-detune-fine"
@@ -147,9 +135,7 @@
               />
               <output for="synth-suboscillators-0-detune-fine">0</output>
             </fieldset>
-            <label class="block" for="synth-suboscillators-0-phase"
-              >Phase</label
-            >
+            <label for="synth-suboscillators-0-phase">Phase</label>
             <input
               type="range"
               id="synth-suboscillators-0-phase"
@@ -163,7 +149,7 @@
           </fieldset>
           <fieldset id="synth-suboscillators-1">
             <legend>Suboscillator 2</legend>
-            <label class="block" for="synth-suboscillators-1-type">Type</label>
+            <label for="synth-suboscillators-1-type">Type</label>
             <select
               id="synth-suboscillators-1-type"
               name="synth-suboscillators-1-type"
@@ -176,9 +162,7 @@
             </select>
             <fieldset id="synth-suboscillators-1-detune">
               <legend>Detune</legend>
-              <label class="block" for="synth-suboscillators-1-detune-octave"
-                >Octave</label
-              >
+              <label for="synth-suboscillators-1-detune-octave">Octave</label>
               <input
                 type="range"
                 id="synth-suboscillators-1-detune-octave"
@@ -189,9 +173,7 @@
                 value="0"
               />
               <output for="synth-suboscillators-1-detune-octave">0</output>
-              <label class="block" for="synth-suboscillators-1-detune-coarse"
-                >Coarse</label
-              >
+              <label for="synth-suboscillators-1-detune-coarse">Coarse</label>
               <input
                 type="range"
                 id="synth-suboscillators-1-detune-coarse"
@@ -202,9 +184,7 @@
                 value="700"
               />
               <output for="synth-suboscillators-1-detune-coarse">700</output>
-              <label class="block" for="synth-suboscillators-1-detune-fine"
-                >Fine</label
-              >
+              <label for="synth-suboscillators-1-detune-fine">Fine</label>
               <input
                 type="range"
                 id="synth-suboscillators-1-detune-fine"
@@ -216,9 +196,7 @@
               />
               <output for="synth-suboscillators-1-detune-fine">0</output>
             </fieldset>
-            <label class="block" for="synth-suboscillators-1-phase"
-              >Phase</label
-            >
+            <label for="synth-suboscillators-1-phase">Phase</label>
             <input
               type="range"
               id="synth-suboscillators-1-phase"
@@ -234,9 +212,7 @@
             <legend>Envelope</legend>
             <fieldset id="synth-envelope-envelope">
               <legend>Envelope</legend>
-              <label class="block" for="synth-envelope-envelope-attack"
-                >Attack</label
-              >
+              <label for="synth-envelope-envelope-attack">Attack</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-attack"
@@ -247,9 +223,7 @@
                 value="0.01"
               />
               <output for="synth-envelope-envelope-attack">0.01</output>
-              <label class="block" for="synth-envelope-envelope-decay"
-                >Decay</label
-              >
+              <label for="synth-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-decay"
@@ -260,9 +234,7 @@
                 value="0"
               />
               <output for="synth-envelope-envelope-decay">0</output>
-              <label class="block" for="synth-envelope-envelope-sustain"
-                >Sustain</label
-              >
+              <label for="synth-envelope-envelope-sustain">Sustain</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-sustain"
@@ -273,9 +245,7 @@
                 value="1"
               />
               <output for="synth-envelope-envelope-sustain">1</output>
-              <label class="block" for="synth-envelope-envelope-release"
-                >Release</label
-              >
+              <label for="synth-envelope-envelope-release">Release</label>
               <input
                 type="range"
                 id="synth-envelope-envelope-release"
@@ -289,7 +259,7 @@
             </fieldset>
           </fieldset>
         </div>
-        <label class="block" for="piano-mode">Mode</label>
+        <label for="piano-mode">Mode</label>
         <select id="piano-mode" name="piano-mode" value="button">
           <option value="button" selected>button</option>
           <option value="toggle">toggle</option>

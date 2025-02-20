@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[FX] Special FX | Sound Design Online</title>
     <meta
@@ -10,24 +10,24 @@
       content="Creating Sounds for Electronic Music using web audio."
     />
     <link
-      rel="canonical"
-      href="https://stevecherry.net/sound-design-online/fx/"
+      rel="stylesheet"
+      href="https://stevecherry.net/normcore/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script src="../public/script.js" defer></script>
     <script src="fx.js" type="module"></script>
   </head>
   <body>
-    <div class="container cover stack">
+    <div class="center cover stack">
       <header role="banner">
         <a href="../">Sound Design Online</a>
       </header>
-      <main class="[ stack ] [ flex-auto ]" role="main">
+      <main class="[ stack ] [ fx-auto ]" role="main">
         <h1>[FX] Special FX</h1>
         <div class="grid">
           <fieldset id="noise">
             <legend>Noise</legend>
-            <label class="block" for="noise-type">Type</label>
+            <label for="noise-type">Type</label>
             <select id="noise-type" name="noise-type" value="">
               <option value="white">white</option>
               <option value="pink">pink</option>
@@ -36,22 +36,20 @@
           </fieldset>
           <fieldset id="filter">
             <legend>Filter</legend>
-            <label class="block" for="filter-frequency">Frequency</label>
+            <label for="filter-frequency">Frequency</label>
             <select id="filter-frequency" name="filter-frequency" value="4m">
               <option value="4n">4n</option>
               <option value="8n">8n</option>
               <option value="16n">16n</option>
             </select>
-            <label class="block" for="filter-type">Type</label>
+            <label for="filter-type">Type</label>
             <select id="filter-type" name="filter-type" value="sawtooth">
               <option value="sine">sine</option>
               <option value="triangle">triangle</option>
               <option value="square">square</option>
               <option value="sawtooth" selected>sawtooth</option>
             </select>
-            <label class="block" for="filter-base-frequency"
-              >Base frequency</label
-            >
+            <label for="filter-base-frequency">Base frequency</label>
             <input
               type="range"
               id="filter-base-frequency"
@@ -62,7 +60,7 @@
               value="20"
             />
             <output for="filter-base-frequency">20</output>
-            <label class="block" for="filter-octaves">Octaves</label>
+            <label for="filter-octaves">Octaves</label>
             <input
               type="range"
               id="filter-octaves"
@@ -73,7 +71,7 @@
               value="6"
             />
             <output for="filter-octaves">6</output>
-            <label class="block" for="filter-filter-type">Filter type</label>
+            <label for="filter-filter-type">Filter type</label>
             <select
               id="filter-filter-type"
               name="filter-filter-type"
@@ -88,9 +86,7 @@
               <option value="allpass">allpass</option>
               <option value="peaking">peaking</option>
             </select>
-            <label class="block" for="filter-filter-rolloff"
-              >Filter rolloff</label
-            >
+            <label for="filter-filter-rolloff">Filter rolloff</label>
             <select
               id="filter-filter-rolloff"
               name="filter-filter-rolloff"
@@ -101,7 +97,7 @@
               <option value="-48">-48</option>
               <option value="-96">-96</option>
             </select>
-            <label class="block" for="filter-filter-q">Filter Q</label>
+            <label for="filter-filter-q">Filter Q</label>
             <input
               type="range"
               id="filter-filter-q"
@@ -115,7 +111,7 @@
           </fieldset>
           <fieldset id="reverb">
             <legend>Reverb</legend>
-            <label class="block" for="reverb-room-size">Room size</label>
+            <label for="reverb-room-size">Room size</label>
             <input
               type="range"
               id="reverb-room-size"
@@ -126,7 +122,7 @@
               value="0.2"
             />
             <output for="reverb-room-size">0.2</output>
-            <label class="block" for="reverb-dampening">Dampening</label>
+            <label for="reverb-dampening">Dampening</label>
             <input
               type="range"
               id="reverb-dampening"
@@ -140,7 +136,7 @@
           </fieldset>
           <fieldset id="transport">
             <legend>Transport</legend>
-            <label class="block" for="transport-bpm">BPM</label>
+            <label for="transport-bpm">BPM</label>
             <input
               type="range"
               id="transport-bpm"
@@ -160,7 +156,7 @@
             <label for="transport-state"> State </label>
           </fieldset>
         </div>
-        <label class="block" for="piano-mode">Mode</label>
+        <label for="piano-mode">Mode</label>
         <select id="piano-mode" name="piano-mode" value="button">
           <option value="button" selected>button</option>
           <option value="toggle">toggle</option>
