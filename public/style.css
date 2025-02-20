@@ -2,5 +2,4 @@
   --cluster-space: var(--size--1);
   --center-space: var(--size-1);
   --grid-space: var(--size--1);
-  --grid-min: 12em;
 }
