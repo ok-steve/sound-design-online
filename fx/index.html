@@ -10,9 +10,13 @@
     />
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/normcore.css"
+      href="https://stevecherry.net/normcore/css/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
+      defer
+    ></script>
     <script src="../public/script.js" defer></script>
     <script src="fx.js" type="module"></script>
   </head>
@@ -58,7 +62,7 @@
               step="1"
               value="20"
             />
-            <output for="filter-base-frequency">20</output>
+            <output is="output-sync" for="filter-base-frequency">20</output>
             <label for="filter-octaves">Octaves</label>
             <input
               type="range"
@@ -69,7 +73,7 @@
               step="1"
               value="6"
             />
-            <output for="filter-octaves">6</output>
+            <output is="output-sync" for="filter-octaves">6</output>
             <label for="filter-filter-type">Filter type</label>
             <select
               id="filter-filter-type"
@@ -106,7 +110,7 @@
               step="1"
               value="100"
             />
-            <output for="filter-filter-q">100</output>
+            <output is="output-sync" for="filter-filter-q">100</output>
           </fieldset>
           <fieldset id="reverb">
             <legend>Reverb</legend>
@@ -120,7 +124,7 @@
               step="0.001"
               value="0.2"
             />
-            <output for="reverb-room-size">0.2</output>
+            <output is="output-sync" for="reverb-room-size">0.2</output>
             <label for="reverb-dampening">Dampening</label>
             <input
               type="range"
@@ -131,7 +135,7 @@
               step="1"
               value="1000"
             />
-            <output for="reverb-dampening">1000</output>
+            <output is="output-sync" for="reverb-dampening">1000</output>
           </fieldset>
           <fieldset id="transport">
             <legend>Transport</legend>
@@ -145,7 +149,7 @@
               step="1"
               value="120"
             />
-            <output for="transport-bpm">120</output>
+            <output is="output-sync" for="transport-bpm">120</output>
             <input
               type="checkbox"
               id="transport-state"

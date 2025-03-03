@@ -10,9 +10,13 @@
     />
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/normcore.css"
+      href="https://stevecherry.net/normcore/css/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
+      defer
+    ></script>
     <script src="../public/script.js" defer></script>
     <script src="dr.js" type="module"></script>
   </head>
@@ -49,7 +53,9 @@
                 step="1200"
                 value="0"
               />
-              <output for="synth-oscillator-detune-octave">0</output>
+              <output is="output-sync" for="synth-oscillator-detune-octave"
+                >0</output
+              >
               <label for="synth-oscillator-detune-coarse">Coarse</label>
               <input
                 type="range"
@@ -60,7 +66,9 @@
                 step="100"
                 value="0"
               />
-              <output for="synth-oscillator-detune-coarse">0</output>
+              <output is="output-sync" for="synth-oscillator-detune-coarse"
+                >0</output
+              >
               <label for="synth-oscillator-detune-fine">Fine</label>
               <input
                 type="range"
@@ -71,7 +79,9 @@
                 step="1"
                 value="0"
               />
-              <output for="synth-oscillator-detune-fine">0</output>
+              <output is="output-sync" for="synth-oscillator-detune-fine"
+                >0</output
+              >
             </fieldset>
             <label for="synth-oscillator-phase">Phase</label>
             <input
@@ -83,7 +93,7 @@
               step="1"
               value="0"
             />
-            <output for="synth-oscillator-phase">0</output>
+            <output is="output-sync" for="synth-oscillator-phase">0</output>
           </fieldset>
           <fieldset id="synth-envelope">
             <legend>Envelope</legend>
@@ -99,7 +109,9 @@
                 step="0.001"
                 value="0.01"
               />
-              <output for="synth-envelope-envelope-attack">0.01</output>
+              <output is="output-sync" for="synth-envelope-envelope-attack"
+                >0.01</output
+              >
               <label for="synth-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
@@ -110,7 +122,9 @@
                 step="0.001"
                 value="0.04"
               />
-              <output for="synth-envelope-envelope-decay">0.04</output>
+              <output is="output-sync" for="synth-envelope-envelope-decay"
+                >0.04</output
+              >
               <label for="synth-envelope-envelope-sustain">Sustain</label>
               <input
                 type="range"
@@ -121,7 +135,9 @@
                 step="0.001"
                 value="0"
               />
-              <output for="synth-envelope-envelope-sustain">0</output>
+              <output is="output-sync" for="synth-envelope-envelope-sustain"
+                >0</output
+              >
               <label for="synth-envelope-envelope-release">Release</label>
               <input
                 type="range"
@@ -132,7 +148,9 @@
                 step="0.001"
                 value="0.04"
               />
-              <output for="synth-envelope-envelope-release">0.04</output>
+              <output is="output-sync" for="synth-envelope-envelope-release"
+                >0.04</output
+              >
             </fieldset>
           </fieldset>
           <fieldset id="other">
@@ -147,7 +165,7 @@
               step="0.001"
               value="0.005"
             />
-            <output for="synth-pitch-decay">0.005</output>
+            <output is="output-sync" for="synth-pitch-decay">0.005</output>
             <label for="synth-octaves">Octaves</label>
             <input
               type="range"
@@ -158,7 +176,7 @@
               step="1"
               value="10"
             />
-            <output for="synth-octaves">10</output>
+            <output is="output-sync" for="synth-octaves">10</output>
           </fieldset>
         </div>
         <label for="piano-mode">Mode</label>

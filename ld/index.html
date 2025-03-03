@@ -10,9 +10,13 @@
     />
     <link
       rel="stylesheet"
-      href="https://stevecherry.net/normcore/normcore.css"
+      href="https://stevecherry.net/normcore/css/normcore.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
+    <script
+      src="https://stevecherry.net/normcore/js/normcore.js"
+      defer
+    ></script>
     <script src="../public/script.js" defer></script>
     <script src="./ld.js" type="module"></script>
   </head>
@@ -49,7 +53,9 @@
                 step="1200"
                 value="0"
               />
-              <output for="synth-oscillator-detune-octave">0</output>
+              <output is="output-sync" for="synth-oscillator-detune-octave"
+                >0</output
+              >
               <label for="synth-oscillator-detune-coarse">Coarse</label>
               <input
                 type="range"
@@ -60,7 +66,9 @@
                 step="100"
                 value="0"
               />
-              <output for="synth-oscillator-detune-coarse">0</output>
+              <output is="output-sync" for="synth-oscillator-detune-coarse"
+                >0</output
+              >
               <label for="synth-oscillator-detune-fine">Fine</label>
               <input
                 type="range"
@@ -71,7 +79,9 @@
                 step="1"
                 value="0"
               />
-              <output for="synth-oscillator-detune-fine">0</output>
+              <output is="output-sync" for="synth-oscillator-detune-fine"
+                >0</output
+              >
             </fieldset>
             <label for="synth-oscillator-phase">Phase</label>
             <input
@@ -83,7 +93,7 @@
               step="1"
               value="0"
             />
-            <output for="synth-oscillator-phase">0</output>
+            <output is="output-sync" for="synth-oscillator-phase">0</output>
           </fieldset>
           <fieldset id="synth-envelope">
             <legend>Envelope</legend>
@@ -99,7 +109,9 @@
                 step="0.001"
                 value="0.01"
               />
-              <output for="synth-envelope-envelope-attack">0.01</output>
+              <output is="output-sync" for="synth-envelope-envelope-attack"
+                >0.01</output
+              >
               <label for="synth-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
@@ -110,7 +122,10 @@
                 step="0.001"
                 value=""
               />
-              <output for="synth-envelope-envelope-decay"></output>
+              <output
+                is="output-sync"
+                for="synth-envelope-envelope-decay"
+              ></output>
               <label for="synth-envelope-envelope-sustain">Sustain</label>
               <input
                 type="range"
@@ -121,7 +136,9 @@
                 step="0.001"
                 value="1"
               />
-              <output for="synth-envelope-envelope-sustain">1</output>
+              <output is="output-sync" for="synth-envelope-envelope-sustain"
+                >1</output
+              >
               <label for="synth-envelope-envelope-release">Release</label>
               <input
                 type="range"
@@ -132,7 +149,9 @@
                 step="0.001"
                 value="0.005"
               />
-              <output for="synth-envelope-envelope-release">0.005</output>
+              <output is="output-sync" for="synth-envelope-envelope-release"
+                >0.005</output
+              >
             </fieldset>
           </fieldset>
           <fieldset id="undefined">
@@ -147,7 +166,7 @@
               step="0.001"
               value="0.3"
             />
-            <output for="synth-portamento">0.3</output>
+            <output is="output-sync" for="synth-portamento">0.3</output>
           </fieldset>
           <fieldset id="synth-filter">
             <legend>Filter</legend>
@@ -187,7 +206,7 @@
               step="1"
               value="350"
             />
-            <output for="synth-filter-frequency">350</output>
+            <output is="output-sync" for="synth-filter-frequency">350</output>
             <label for="synth-filter-q">Q</label>
             <input
               type="range"
@@ -198,7 +217,7 @@
               step="1"
               value="6"
             />
-            <output for="synth-filter-q">6</output>
+            <output is="output-sync" for="synth-filter-q">6</output>
           </fieldset>
           <fieldset id="synth-filter-envelope">
             <legend>Filter envelope</legend>
@@ -214,7 +233,11 @@
                 step="0.001"
                 value="0"
               />
-              <output for="synth-filter-envelope-envelope-attack">0</output>
+              <output
+                is="output-sync"
+                for="synth-filter-envelope-envelope-attack"
+                >0</output
+              >
               <label for="synth-filter-envelope-envelope-decay">Decay</label>
               <input
                 type="range"
@@ -225,7 +248,11 @@
                 step="0.001"
                 value="0"
               />
-              <output for="synth-filter-envelope-envelope-decay">0</output>
+              <output
+                is="output-sync"
+                for="synth-filter-envelope-envelope-decay"
+                >0</output
+              >
               <label for="synth-filter-envelope-envelope-sustain"
                 >Sustain</label
               >
@@ -238,7 +265,11 @@
                 step="0.001"
                 value="0.5"
               />
-              <output for="synth-filter-envelope-envelope-sustain">0.5</output>
+              <output
+                is="output-sync"
+                for="synth-filter-envelope-envelope-sustain"
+                >0.5</output
+              >
               <label for="synth-filter-envelope-envelope-release"
                 >Release</label
               >
@@ -251,7 +282,11 @@
                 step="0.001"
                 value="1"
               />
-              <output for="synth-filter-envelope-envelope-release">1</output>
+              <output
+                is="output-sync"
+                for="synth-filter-envelope-envelope-release"
+                >1</output
+              >
             </fieldset>
             <label for="synth-filter-envelope-base-frequency"
               >Base frequency</label
@@ -265,7 +300,9 @@
               step="1"
               value="200"
             />
-            <output for="synth-filter-envelope-base-frequency">200</output>
+            <output is="output-sync" for="synth-filter-envelope-base-frequency"
+              >200</output
+            >
             <label for="synth-filter-envelope-octaves">Octaves</label>
             <input
               type="range"
@@ -276,7 +313,9 @@
               step="1"
               value="0"
             />
-            <output for="synth-filter-envelope-octaves">0</output>
+            <output is="output-sync" for="synth-filter-envelope-octaves"
+              >0</output
+            >
             <label for="synth-filter-envelope-exponent">Exponent</label>
             <input
               type="range"
@@ -287,7 +326,9 @@
               step="1"
               value="1"
             />
-            <output for="synth-filter-envelope-exponent">1</output>
+            <output is="output-sync" for="synth-filter-envelope-exponent"
+              >1</output
+            >
           </fieldset>
         </div>
         <label for="piano-mode">Mode</label>
