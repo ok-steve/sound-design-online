@@ -1,5 +1,3 @@
 :root {
-  --cluster-space: var(--size--1);
-  --center-space: var(--size-1);
-  --grid-space: var(--size--1);
+  --center-size: calc(1000px + 2rlh);
 }
