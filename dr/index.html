@@ -10,190 +10,174 @@
       content="Creating Sounds for Electronic Music using web audio."
     />
     <link
-      rel="canonical"
-      href="https://stevecherry.net/sound-design-online/dr/"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script src="../public/script.js" defer></script>
-    <script src="dr.js" type="module"></script>
+    <script src="./dr.js" type="module"></script>
   </head>
-  <body>
-    <div class="container cover stack">
-      <header role="banner">
-        <a href="../">Sound Design Online</a>
-      </header>
-      <main class="[ stack ] [ flex-auto ]" role="main">
-        <h1>[DR] Kick Drum</h1>
-        <div class="grid">
-          <fieldset id="synth-oscillator">
-            <legend>Oscillator</legend>
-            <label class="block" for="synth-oscillator-type">Type</label>
-            <select
-              id="synth-oscillator-type"
-              name="synth-oscillator-type"
-              value="sine"
-            >
-              <option value="sine" selected>sine</option>
-              <option value="triangle">triangle</option>
-              <option value="square">square</option>
-              <option value="sawtooth">sawtooth</option>
-            </select>
-            <fieldset id="synth-oscillator-detune">
-              <legend>Detune</legend>
-              <label class="block" for="synth-oscillator-detune-octave"
-                >Octave</label
-              >
-              <input
-                type="range"
-                id="synth-oscillator-detune-octave"
-                name="synth-oscillator-detune-octave"
-                min="-3600"
-                max="3600"
-                step="1200"
-                value="0"
-              />
-              <output for="synth-oscillator-detune-octave">0</output>
-              <label class="block" for="synth-oscillator-detune-coarse"
-                >Coarse</label
-              >
-              <input
-                type="range"
-                id="synth-oscillator-detune-coarse"
-                name="synth-oscillator-detune-coarse"
-                min="-1200"
-                max="1200"
-                step="100"
-                value="0"
-              />
-              <output for="synth-oscillator-detune-coarse">0</output>
-              <label class="block" for="synth-oscillator-detune-fine"
-                >Fine</label
-              >
-              <input
-                type="range"
-                id="synth-oscillator-detune-fine"
-                name="synth-oscillator-detune-fine"
-                min="-100"
-                max="100"
-                step="1"
-                value="0"
-              />
-              <output for="synth-oscillator-detune-fine">0</output>
-            </fieldset>
-            <label class="block" for="synth-oscillator-phase">Phase</label>
+  <body class="container-fluid">
+    <header role="banner">
+      <a rel="home" href="../">Sound Design Online</a>
+    </header>
+    <main role="main">
+      <h1>[DR] Kick Drum</h1>
+      <div class="grid">
+        <fieldset id="synth-oscillator">
+          <legend>Oscillator</legend>
+          <label for="synth-oscillator-type">Type</label>
+          <select
+            id="synth-oscillator-type"
+            name="synth-oscillator-type"
+            value="sine"
+          >
+            <option value="sine" selected>sine</option>
+            <option value="triangle">triangle</option>
+            <option value="square">square</option>
+            <option value="sawtooth">sawtooth</option>
+          </select>
+          <fieldset id="synth-oscillator-detune">
+            <legend>Detune</legend>
+            <label for="synth-oscillator-detune-octave">Octave</label>
+            <output for="synth-oscillator-detune-octave">0</output>
             <input
               type="range"
-              id="synth-oscillator-phase"
-              name="synth-oscillator-phase"
-              min="-180"
-              max="180"
+              id="synth-oscillator-detune-octave"
+              name="synth-oscillator-detune-octave"
+              min="-3600"
+              max="3600"
+              step="1200"
+              value="0"
+            />
+            <label for="synth-oscillator-detune-coarse">Coarse</label>
+            <output for="synth-oscillator-detune-coarse">0</output>
+            <input
+              type="range"
+              id="synth-oscillator-detune-coarse"
+              name="synth-oscillator-detune-coarse"
+              min="-1200"
+              max="1200"
+              step="100"
+              value="0"
+            />
+            <label for="synth-oscillator-detune-fine">Fine</label>
+            <output for="synth-oscillator-detune-fine">0</output>
+            <input
+              type="range"
+              id="synth-oscillator-detune-fine"
+              name="synth-oscillator-detune-fine"
+              min="-100"
+              max="100"
               step="1"
               value="0"
             />
-            <output for="synth-oscillator-phase">0</output>
           </fieldset>
-          <fieldset id="synth-envelope">
+          <label for="synth-oscillator-phase">Phase</label>
+          <output for="synth-oscillator-phase">0</output>
+          <input
+            type="range"
+            id="synth-oscillator-phase"
+            name="synth-oscillator-phase"
+            min="-180"
+            max="180"
+            step="1"
+            value="0"
+          />
+        </fieldset>
+        <fieldset id="synth-envelope">
+          <legend>Envelope</legend>
+          <fieldset id="synth-envelope-envelope">
             <legend>Envelope</legend>
-            <fieldset id="synth-envelope-envelope">
-              <legend>Envelope</legend>
-              <label class="block" for="synth-envelope-envelope-attack"
-                >Attack</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-attack"
-                name="synth-envelope-envelope-attack"
-                min="0"
-                max="1"
-                step="0.001"
-                value="0.01"
-              />
-              <output for="synth-envelope-envelope-attack">0.01</output>
-              <label class="block" for="synth-envelope-envelope-decay"
-                >Decay</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-decay"
-                name="synth-envelope-envelope-decay"
-                min="0"
-                max="1"
-                step="0.001"
-                value="0.04"
-              />
-              <output for="synth-envelope-envelope-decay">0.04</output>
-              <label class="block" for="synth-envelope-envelope-sustain"
-                >Sustain</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-sustain"
-                name="synth-envelope-envelope-sustain"
-                min="0"
-                max="1"
-                step="0.001"
-                value="0"
-              />
-              <output for="synth-envelope-envelope-sustain">0</output>
-              <label class="block" for="synth-envelope-envelope-release"
-                >Release</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-release"
-                name="synth-envelope-envelope-release"
-                min="0"
-                max="1"
-                step="0.001"
-                value="0.04"
-              />
-              <output for="synth-envelope-envelope-release">0.04</output>
-            </fieldset>
-          </fieldset>
-          <fieldset id="other">
-            <legend>Other</legend>
-            <label class="block" for="synth-pitch-decay">Pitch decay</label>
+            <label for="synth-envelope-envelope-attack">Attack</label>
+            <output for="synth-envelope-envelope-attack">0.01</output>
             <input
               type="range"
-              id="synth-pitch-decay"
-              name="synth-pitch-decay"
+              id="synth-envelope-envelope-attack"
+              name="synth-envelope-envelope-attack"
               min="0"
               max="1"
               step="0.001"
-              value="0.005"
+              value="0.01"
             />
-            <output for="synth-pitch-decay">0.005</output>
-            <label class="block" for="synth-octaves">Octaves</label>
+            <label for="synth-envelope-envelope-decay">Decay</label>
+            <output for="synth-envelope-envelope-decay">0.04</output>
             <input
               type="range"
-              id="synth-octaves"
-              name="synth-octaves"
+              id="synth-envelope-envelope-decay"
+              name="synth-envelope-envelope-decay"
               min="0"
-              max="20"
-              step="1"
-              value="10"
+              max="1"
+              step="0.001"
+              value="0.04"
             />
-            <output for="synth-octaves">10</output>
+            <label for="synth-envelope-envelope-sustain">Sustain</label>
+            <output for="synth-envelope-envelope-sustain">0</output>
+            <input
+              type="range"
+              id="synth-envelope-envelope-sustain"
+              name="synth-envelope-envelope-sustain"
+              min="0"
+              max="1"
+              step="0.001"
+              value="0"
+            />
+            <label for="synth-envelope-envelope-release">Release</label>
+            <output for="synth-envelope-envelope-release">0.04</output>
+            <input
+              type="range"
+              id="synth-envelope-envelope-release"
+              name="synth-envelope-envelope-release"
+              min="0"
+              max="1"
+              step="0.001"
+              value="0.04"
+            />
           </fieldset>
-        </div>
-        <label class="block" for="piano-mode">Mode</label>
-        <select id="piano-mode" name="piano-mode" value="button">
-          <option value="button" selected>button</option>
-          <option value="toggle">toggle</option>
-          <option value="impulse">impulse</option>
-        </select>
-        <div id="piano-piano"></div>
-      </main>
-      <footer class="stack" role="contentinfo">
-        <p>Creating Sounds for Electronic Music using web audio.</p>
-        <p>
-          Yet
-          <a href="https://github.com/ok-steve/sound-design-online#readme"
-            >another project</a
-          >
-          by <a href="https://stevecherry.net">Steve Cherry</a>.
-        </p>
-      </footer>
-    </div>
+        </fieldset>
+        <fieldset id="other">
+          <legend>Other</legend>
+          <label for="synth-pitch-decay">Pitch decay</label>
+          <output for="synth-pitch-decay">0.005</output>
+          <input
+            type="range"
+            id="synth-pitch-decay"
+            name="synth-pitch-decay"
+            min="0"
+            max="1"
+            step="0.001"
+            value="0.005"
+          />
+          <label for="synth-octaves">Octaves</label>
+          <output for="synth-octaves">10</output>
+          <input
+            type="range"
+            id="synth-octaves"
+            name="synth-octaves"
+            min="0"
+            max="20"
+            step="1"
+            value="10"
+          />
+        </fieldset>
+      </div>
+      <label for="piano-mode">Mode</label>
+      <select id="piano-mode" name="piano-mode" value="button">
+        <option value="button" selected>button</option>
+        <option value="toggle">toggle</option>
+        <option value="impulse">impulse</option>
+      </select>
+      <div id="piano-piano"></div>
+    </main>
+    <footer role="contentinfo">
+      <p>Creating Sounds for Electronic Music using web audio.</p>
+      <p>
+        Yet another
+        <a href="https://github.com/ok-steve/sound-design-online#readme"
+          >project</a
+        >
+        by <a href="https://stevecherry.net">Steve Cherry</a>.
+      </p>
+    </footer>
   </body>
 </html>

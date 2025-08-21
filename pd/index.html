@@ -10,412 +10,384 @@
       content="Creating Sounds for Electronic Music using web audio."
     />
     <link
-      rel="canonical"
-      href="https://stevecherry.net/sound-design-online/pd/"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
     <link rel="stylesheet" href="../public/style.css" />
     <script src="../public/script.js" defer></script>
     <script src="./pd.js" type="module"></script>
   </head>
-  <body>
-    <div class="container cover stack">
-      <header role="banner">
-        <a href="../">Sound Design Online</a>
-      </header>
-      <main class="[ stack ] [ flex-auto ]" role="main">
-        <h1>[PD] Pad</h1>
-        <div class="grid">
-          <fieldset id="synth-oscillator">
-            <legend>Oscillator</legend>
-            <label class="block" for="synth-oscillator-type">Type</label>
-            <select
-              id="synth-oscillator-type"
-              name="synth-oscillator-type"
-              value="fatsquare"
-            >
-              <option value="fatsine">fatsine</option>
-              <option value="fattriangle">fattriangle</option>
-              <option value="fatsquare" selected>fatsquare</option>
-              <option value="fatsawtooth">fatsawtooth</option>
-            </select>
-            <fieldset id="synth-oscillator-detune">
-              <legend>Detune</legend>
-              <label class="block" for="synth-oscillator-detune-octave"
-                >Octave</label
-              >
-              <input
-                type="range"
-                id="synth-oscillator-detune-octave"
-                name="synth-oscillator-detune-octave"
-                min="-3600"
-                max="3600"
-                step="1200"
-                value="0"
-              />
-              <output for="synth-oscillator-detune-octave">0</output>
-              <label class="block" for="synth-oscillator-detune-coarse"
-                >Coarse</label
-              >
-              <input
-                type="range"
-                id="synth-oscillator-detune-coarse"
-                name="synth-oscillator-detune-coarse"
-                min="-1200"
-                max="1200"
-                step="100"
-                value="0"
-              />
-              <output for="synth-oscillator-detune-coarse">0</output>
-              <label class="block" for="synth-oscillator-detune-fine"
-                >Fine</label
-              >
-              <input
-                type="range"
-                id="synth-oscillator-detune-fine"
-                name="synth-oscillator-detune-fine"
-                min="-100"
-                max="100"
-                step="1"
-                value="0"
-              />
-              <output for="synth-oscillator-detune-fine">0</output>
-            </fieldset>
-            <label class="block" for="synth-oscillator-phase">Phase</label>
-            <input
-              type="range"
-              id="synth-oscillator-phase"
-              name="synth-oscillator-phase"
-              min="-180"
-              max="180"
-              step="1"
-              value="0"
-            />
-            <output for="synth-oscillator-phase">0</output>
-          </fieldset>
-          <fieldset id="synth-envelope">
-            <legend>Envelope</legend>
-            <fieldset id="synth-envelope-envelope">
-              <legend>Envelope</legend>
-              <label class="block" for="synth-envelope-envelope-attack"
-                >Attack</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-attack"
-                name="synth-envelope-envelope-attack"
-                min="0"
-                max="1"
-                step="0.001"
-                value="1"
-              />
-              <output for="synth-envelope-envelope-attack">1</output>
-              <label class="block" for="synth-envelope-envelope-decay"
-                >Decay</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-decay"
-                name="synth-envelope-envelope-decay"
-                min="0"
-                max="1"
-                step="0.001"
-                value="0.1"
-              />
-              <output for="synth-envelope-envelope-decay">0.1</output>
-              <label class="block" for="synth-envelope-envelope-sustain"
-                >Sustain</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-sustain"
-                name="synth-envelope-envelope-sustain"
-                min="0"
-                max="1"
-                step="0.001"
-                value="1"
-              />
-              <output for="synth-envelope-envelope-sustain">1</output>
-              <label class="block" for="synth-envelope-envelope-release"
-                >Release</label
-              >
-              <input
-                type="range"
-                id="synth-envelope-envelope-release"
-                name="synth-envelope-envelope-release"
-                min="0"
-                max="1"
-                step="0.001"
-                value=""
-              />
-              <output for="synth-envelope-envelope-release"></output>
-            </fieldset>
-          </fieldset>
-          <fieldset id="synth-filter">
-            <legend>Filter</legend>
-            <label class="block" for="synth-filter-type">Type</label>
-            <select
-              id="synth-filter-type"
-              name="synth-filter-type"
-              value="notch"
-            >
-              <option value="lowpass">lowpass</option>
-              <option value="highpass">highpass</option>
-              <option value="bandpass">bandpass</option>
-              <option value="lowshelf">lowshelf</option>
-              <option value="highshelf">highshelf</option>
-              <option value="notch" selected>notch</option>
-              <option value="allpass">allpass</option>
-              <option value="peaking">peaking</option>
-            </select>
-            <label class="block" for="synth-filter-rolloff">Rolloff</label>
-            <select
-              id="synth-filter-rolloff"
-              name="synth-filter-rolloff"
-              value="-12"
-            >
-              <option value="-12" selected>-12</option>
-              <option value="-24">-24</option>
-              <option value="-48">-48</option>
-              <option value="-96">-96</option>
-            </select>
-            <label class="block" for="synth-filter-frequency">Frequency</label>
-            <input
-              type="range"
-              id="synth-filter-frequency"
-              name="synth-filter-frequency"
-              min="10"
-              max="24000"
-              step="1"
-              value="350"
-            />
-            <output for="synth-filter-frequency">350</output>
-            <label class="block" for="synth-filter-q">Q</label>
-            <input
-              type="range"
-              id="synth-filter-q"
-              name="synth-filter-q"
-              min="1"
-              max="8"
-              step="1"
-              value="10"
-            />
-            <output for="synth-filter-q">10</output>
-          </fieldset>
-          <fieldset id="synth-filter-envelope">
-            <legend>Filter envelope</legend>
-            <fieldset id="synth-filter-envelope-envelope">
-              <legend>Envelope</legend>
-              <label class="block" for="synth-filter-envelope-envelope-attack"
-                >Attack</label
-              >
-              <input
-                type="range"
-                id="synth-filter-envelope-envelope-attack"
-                name="synth-filter-envelope-envelope-attack"
-                min="0"
-                max="3"
-                step="0.001"
-                value="0.01"
-              />
-              <output for="synth-filter-envelope-envelope-attack">0.01</output>
-              <label class="block" for="synth-filter-envelope-envelope-decay"
-                >Decay</label
-              >
-              <input
-                type="range"
-                id="synth-filter-envelope-envelope-decay"
-                name="synth-filter-envelope-envelope-decay"
-                min="0"
-                max="3"
-                step="0.001"
-                value="0.1"
-              />
-              <output for="synth-filter-envelope-envelope-decay">0.1</output>
-              <label class="block" for="synth-filter-envelope-envelope-sustain"
-                >Sustain</label
-              >
-              <input
-                type="range"
-                id="synth-filter-envelope-envelope-sustain"
-                name="synth-filter-envelope-envelope-sustain"
-                min="0"
-                max="3"
-                step="0.001"
-                value="0.5"
-              />
-              <output for="synth-filter-envelope-envelope-sustain">0.5</output>
-              <label class="block" for="synth-filter-envelope-envelope-release"
-                >Release</label
-              >
-              <input
-                type="range"
-                id="synth-filter-envelope-envelope-release"
-                name="synth-filter-envelope-envelope-release"
-                min="0"
-                max="3"
-                step="0.001"
-                value="1"
-              />
-              <output for="synth-filter-envelope-envelope-release">1</output>
-            </fieldset>
-            <label class="block" for="synth-filter-envelope-base-frequency"
-              >Base frequency</label
-            >
-            <input
-              type="range"
-              id="synth-filter-envelope-base-frequency"
-              name="synth-filter-envelope-base-frequency"
-              min="10"
-              max="24000"
-              step="1"
-              value="2000"
-            />
-            <output for="synth-filter-envelope-base-frequency">2000</output>
-            <label class="block" for="synth-filter-envelope-octaves"
-              >Octaves</label
-            >
-            <input
-              type="range"
-              id="synth-filter-envelope-octaves"
-              name="synth-filter-envelope-octaves"
-              min="1"
-              max="20"
-              step="1"
-              value="0"
-            />
-            <output for="synth-filter-envelope-octaves">0</output>
-            <label class="block" for="synth-filter-envelope-exponent"
-              >Exponent</label
-            >
-            <input
-              type="range"
-              id="synth-filter-envelope-exponent"
-              name="synth-filter-envelope-exponent"
-              min="1"
-              max="5"
-              step="1"
-              value="1"
-            />
-            <output for="synth-filter-envelope-exponent">1</output>
-          </fieldset>
-          <fieldset id="chorus">
-            <legend>Chorus</legend>
-            <label class="block" for="chorus-frequency">Frequency</label>
-            <input
-              type="range"
-              id="chorus-frequency"
-              name="chorus-frequency"
-              min="0"
-              max="10"
-              step="0.001"
-              value="2"
-            />
-            <output for="chorus-frequency">2</output>
-            <label class="block" for="chorus-delay-time">Delay time</label>
-            <input
-              type="range"
-              id="chorus-delay-time"
-              name="chorus-delay-time"
-              min="0"
-              max="2"
-              step="0.001"
-              value="0"
-            />
-            <output for="chorus-delay-time">0</output>
-            <label class="block" for="chorus-depth">Depth</label>
-            <input
-              type="range"
-              id="chorus-depth"
-              name="chorus-depth"
-              min="0"
-              max="1"
-              step="0.001"
-              value="0.7"
-            />
-            <output for="chorus-depth">0.7</output>
-          </fieldset>
-          <fieldset id="delay">
-            <legend>Delay</legend>
-            <label class="block" for="delay-delay-time">Delay time</label>
-            <select id="delay-delay-time" name="delay-delay-time" value="8n">
-              <option value="4n">4n</option>
-              <option value="8n" selected>8n</option>
-              <option value="16n">16n</option>
-            </select>
-            <label class="block" for="delay-feedback">Feedback</label>
-            <input
-              type="range"
-              id="delay-feedback"
-              name="delay-feedback"
-              min="0"
-              max="1"
-              step="0.001"
-              value="0.7"
-            />
-            <output for="delay-feedback">0.7</output>
-          </fieldset>
-          <fieldset id="filter">
-            <legend>Filter</legend>
-            <label class="block" for="filter-type">Type</label>
-            <select id="filter-type" name="filter-type" value="lowpass">
-              <option value="lowpass" selected>lowpass</option>
-              <option value="highpass">highpass</option>
-              <option value="bandpass">bandpass</option>
-              <option value="lowshelf">lowshelf</option>
-              <option value="highshelf">highshelf</option>
-              <option value="notch">notch</option>
-              <option value="allpass">allpass</option>
-              <option value="peaking">peaking</option>
-            </select>
-            <label class="block" for="filter-rolloff">Rolloff</label>
-            <select id="filter-rolloff" name="filter-rolloff" value="-12">
-              <option value="-12" selected>-12</option>
-              <option value="-24">-24</option>
-              <option value="-48">-48</option>
-              <option value="-96">-96</option>
-            </select>
-            <label class="block" for="filter-frequency">Frequency</label>
-            <input
-              type="range"
-              id="filter-frequency"
-              name="filter-frequency"
-              min="10"
-              max="24000"
-              step="1"
-              value="2000"
-            />
-            <output for="filter-frequency">2000</output>
-            <label class="block" for="filter-q">Q</label>
-            <input
-              type="range"
-              id="filter-q"
-              name="filter-q"
-              min="1"
-              max="8"
-              step="1"
-              value="1"
-            />
-            <output for="filter-q">1</output>
-          </fieldset>
-        </div>
-        <label class="block" for="piano-mode">Mode</label>
-        <select id="piano-mode" name="piano-mode" value="button">
-          <option value="button" selected>button</option>
-          <option value="toggle">toggle</option>
-          <option value="impulse">impulse</option>
-        </select>
-        <div id="piano-piano"></div>
-      </main>
-      <footer class="stack" role="contentinfo">
-        <p>Creating Sounds for Electronic Music using web audio.</p>
-        <p>
-          Yet
-          <a href="https://github.com/ok-steve/sound-design-online#readme"
-            >another project</a
+  <body class="container-fluid">
+    <header role="banner">
+      <a rel="home" href="../">Sound Design Online</a>
+    </header>
+    <main role="main">
+      <h1>[PD] Pad</h1>
+      <div class="grid">
+        <fieldset id="synth-oscillator">
+          <legend>Oscillator</legend>
+          <label for="synth-oscillator-type">Type</label>
+          <select
+            id="synth-oscillator-type"
+            name="synth-oscillator-type"
+            value="fatsquare"
           >
-          by <a href="https://stevecherry.net">Steve Cherry</a>.
-        </p>
-      </footer>
-    </div>
+            <option value="fatsine">fatsine</option>
+            <option value="fattriangle">fattriangle</option>
+            <option value="fatsquare" selected>fatsquare</option>
+            <option value="fatsawtooth">fatsawtooth</option>
+          </select>
+          <fieldset id="synth-oscillator-detune">
+            <legend>Detune</legend>
+            <label for="synth-oscillator-detune-octave">Octave</label>
+            <output for="synth-oscillator-detune-octave">0</output>
+            <input
+              type="range"
+              id="synth-oscillator-detune-octave"
+              name="synth-oscillator-detune-octave"
+              min="-3600"
+              max="3600"
+              step="1200"
+              value="0"
+            />
+            <label for="synth-oscillator-detune-coarse">Coarse</label>
+            <output for="synth-oscillator-detune-coarse">0</output>
+            <input
+              type="range"
+              id="synth-oscillator-detune-coarse"
+              name="synth-oscillator-detune-coarse"
+              min="-1200"
+              max="1200"
+              step="100"
+              value="0"
+            />
+            <label for="synth-oscillator-detune-fine">Fine</label>
+            <output for="synth-oscillator-detune-fine">0</output>
+            <input
+              type="range"
+              id="synth-oscillator-detune-fine"
+              name="synth-oscillator-detune-fine"
+              min="-100"
+              max="100"
+              step="1"
+              value="0"
+            />
+          </fieldset>
+          <label for="synth-oscillator-phase">Phase</label>
+          <output for="synth-oscillator-phase">0</output>
+          <input
+            type="range"
+            id="synth-oscillator-phase"
+            name="synth-oscillator-phase"
+            min="-180"
+            max="180"
+            step="1"
+            value="0"
+          />
+        </fieldset>
+        <fieldset id="synth-envelope">
+          <legend>Envelope</legend>
+          <fieldset id="synth-envelope-envelope">
+            <legend>Envelope</legend>
+            <label for="synth-envelope-envelope-attack">Attack</label>
+            <output for="synth-envelope-envelope-attack">1</output>
+            <input
+              type="range"
+              id="synth-envelope-envelope-attack"
+              name="synth-envelope-envelope-attack"
+              min="0"
+              max="1"
+              step="0.001"
+              value="1"
+            />
+            <label for="synth-envelope-envelope-decay">Decay</label>
+            <output for="synth-envelope-envelope-decay">0.1</output>
+            <input
+              type="range"
+              id="synth-envelope-envelope-decay"
+              name="synth-envelope-envelope-decay"
+              min="0"
+              max="1"
+              step="0.001"
+              value="0.1"
+            />
+            <label for="synth-envelope-envelope-sustain">Sustain</label>
+            <output for="synth-envelope-envelope-sustain">1</output>
+            <input
+              type="range"
+              id="synth-envelope-envelope-sustain"
+              name="synth-envelope-envelope-sustain"
+              min="0"
+              max="1"
+              step="0.001"
+              value="1"
+            />
+            <label for="synth-envelope-envelope-release">Release</label>
+            <input
+              type="range"
+              id="synth-envelope-envelope-release"
+              name="synth-envelope-envelope-release"
+              min="0"
+              max="1"
+              step="0.001"
+              value=""
+            />
+            <output for="synth-envelope-envelope-release"></output>
+          </fieldset>
+        </fieldset>
+      </div>
+      <div class="grid">
+        <fieldset id="synth-filter">
+          <legend>Filter</legend>
+          <label for="synth-filter-type">Type</label>
+          <select id="synth-filter-type" name="synth-filter-type" value="notch">
+            <option value="lowpass">lowpass</option>
+            <option value="highpass">highpass</option>
+            <option value="bandpass">bandpass</option>
+            <option value="lowshelf">lowshelf</option>
+            <option value="highshelf">highshelf</option>
+            <option value="notch" selected>notch</option>
+            <option value="allpass">allpass</option>
+            <option value="peaking">peaking</option>
+          </select>
+          <label for="synth-filter-rolloff">Rolloff</label>
+          <select
+            id="synth-filter-rolloff"
+            name="synth-filter-rolloff"
+            value="-12"
+          >
+            <option value="-12" selected>-12</option>
+            <option value="-24">-24</option>
+            <option value="-48">-48</option>
+            <option value="-96">-96</option>
+          </select>
+          <label for="synth-filter-frequency">Frequency</label>
+          <output for="synth-filter-frequency">350</output>
+          <input
+            type="range"
+            id="synth-filter-frequency"
+            name="synth-filter-frequency"
+            min="10"
+            max="24000"
+            step="1"
+            value="350"
+          />
+          <label for="synth-filter-q">Q</label>
+          <output for="synth-filter-q">10</output>
+          <input
+            type="range"
+            id="synth-filter-q"
+            name="synth-filter-q"
+            min="1"
+            max="8"
+            step="1"
+            value="10"
+          />
+        </fieldset>
+        <fieldset id="synth-filter-envelope">
+          <legend>Filter envelope</legend>
+          <fieldset id="synth-filter-envelope-envelope">
+            <legend>Envelope</legend>
+            <label for="synth-filter-envelope-envelope-attack">Attack</label>
+            <output for="synth-filter-envelope-envelope-attack">0.01</output>
+            <input
+              type="range"
+              id="synth-filter-envelope-envelope-attack"
+              name="synth-filter-envelope-envelope-attack"
+              min="0"
+              max="3"
+              step="0.001"
+              value="0.01"
+            />
+            <label for="synth-filter-envelope-envelope-decay">Decay</label>
+            <output for="synth-filter-envelope-envelope-decay">0.1</output>
+            <input
+              type="range"
+              id="synth-filter-envelope-envelope-decay"
+              name="synth-filter-envelope-envelope-decay"
+              min="0"
+              max="3"
+              step="0.001"
+              value="0.1"
+            />
+            <label for="synth-filter-envelope-envelope-sustain">Sustain</label>
+            <output for="synth-filter-envelope-envelope-sustain">0.5</output>
+            <input
+              type="range"
+              id="synth-filter-envelope-envelope-sustain"
+              name="synth-filter-envelope-envelope-sustain"
+              min="0"
+              max="3"
+              step="0.001"
+              value="0.5"
+            />
+            <label for="synth-filter-envelope-envelope-release">Release</label>
+            <output for="synth-filter-envelope-envelope-release">1</output>
+            <input
+              type="range"
+              id="synth-filter-envelope-envelope-release"
+              name="synth-filter-envelope-envelope-release"
+              min="0"
+              max="3"
+              step="0.001"
+              value="1"
+            />
+          </fieldset>
+          <label for="synth-filter-envelope-base-frequency"
+            >Base frequency</label
+          >
+          <output for="synth-filter-envelope-base-frequency">2000</output>
+          <input
+            type="range"
+            id="synth-filter-envelope-base-frequency"
+            name="synth-filter-envelope-base-frequency"
+            min="10"
+            max="24000"
+            step="1"
+            value="2000"
+          />
+          <label for="synth-filter-envelope-octaves">Octaves</label>
+          <output for="synth-filter-envelope-octaves">0</output>
+          <input
+            type="range"
+            id="synth-filter-envelope-octaves"
+            name="synth-filter-envelope-octaves"
+            min="1"
+            max="20"
+            step="1"
+            value="0"
+          />
+          <label for="synth-filter-envelope-exponent">Exponent</label>
+          <output for="synth-filter-envelope-exponent">1</output>
+          <input
+            type="range"
+            id="synth-filter-envelope-exponent"
+            name="synth-filter-envelope-exponent"
+            min="1"
+            max="5"
+            step="1"
+            value="1"
+          />
+        </fieldset>
+      </div>
+      <div class="grid">
+        <fieldset id="chorus">
+          <legend>Chorus</legend>
+          <label for="chorus-frequency">Frequency</label>
+          <output for="chorus-frequency">2</output>
+          <input
+            type="range"
+            id="chorus-frequency"
+            name="chorus-frequency"
+            min="0"
+            max="10"
+            step="0.001"
+            value="2"
+          />
+          <label for="chorus-delay-time">Delay time</label>
+          <output for="chorus-delay-time">0</output>
+          <input
+            type="range"
+            id="chorus-delay-time"
+            name="chorus-delay-time"
+            min="0"
+            max="2"
+            step="0.001"
+            value="0"
+          />
+          <label for="chorus-depth">Depth</label>
+          <output for="chorus-depth">0.7</output>
+          <input
+            type="range"
+            id="chorus-depth"
+            name="chorus-depth"
+            min="0"
+            max="1"
+            step="0.001"
+            value="0.7"
+          />
+        </fieldset>
+        <fieldset id="delay">
+          <legend>Delay</legend>
+          <label for="delay-delay-time">Delay time</label>
+          <select id="delay-delay-time" name="delay-delay-time" value="8n">
+            <option value="4n">4n</option>
+            <option value="8n" selected>8n</option>
+            <option value="16n">16n</option>
+          </select>
+          <label for="delay-feedback">Feedback</label>
+          <output for="delay-feedback">0.7</output>
+          <input
+            type="range"
+            id="delay-feedback"
+            name="delay-feedback"
+            min="0"
+            max="1"
+            step="0.001"
+            value="0.7"
+          />
+        </fieldset>
+        <fieldset id="filter">
+          <legend>Filter</legend>
+          <label for="filter-type">Type</label>
+          <select id="filter-type" name="filter-type" value="lowpass">
+            <option value="lowpass" selected>lowpass</option>
+            <option value="highpass">highpass</option>
+            <option value="bandpass">bandpass</option>
+            <option value="lowshelf">lowshelf</option>
+            <option value="highshelf">highshelf</option>
+            <option value="notch">notch</option>
+            <option value="allpass">allpass</option>
+            <option value="peaking">peaking</option>
+          </select>
+          <label for="filter-rolloff">Rolloff</label>
+          <select id="filter-rolloff" name="filter-rolloff" value="-12">
+            <option value="-12" selected>-12</option>
+            <option value="-24">-24</option>
+            <option value="-48">-48</option>
+            <option value="-96">-96</option>
+          </select>
+          <label for="filter-frequency">Frequency</label>
+          <output for="filter-frequency">2000</output>
+          <input
+            type="range"
+            id="filter-frequency"
+            name="filter-frequency"
+            min="10"
+            max="24000"
+            step="1"
+            value="2000"
+          />
+          <label for="filter-q">Q</label>
+          <output for="filter-q">1</output>
+          <input
+            type="range"
+            id="filter-q"
+            name="filter-q"
+            min="1"
+            max="8"
+            step="1"
+            value="1"
+          />
+        </fieldset>
+      </div>
+      <label for="piano-mode">Mode</label>
+      <select id="piano-mode" name="piano-mode" value="button">
+        <option value="button" selected>button</option>
+        <option value="toggle">toggle</option>
+        <option value="impulse">impulse</option>
+      </select>
+      <div id="piano-piano"></div>
+    </main>
+    <footer role="contentinfo">
+      <p>Creating Sounds for Electronic Music using web audio.</p>
+      <p>
+        Yet another
+        <a href="https://github.com/ok-steve/sound-design-online#readme"
+          >project</a
+        >
+        by <a href="https://stevecherry.net">Steve Cherry</a>.
+      </p>
+    </footer>
   </body>
 </html>
